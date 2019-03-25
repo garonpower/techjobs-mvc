@@ -24,12 +24,12 @@ public class SearchController {
 
     // TODO #1 - Create handler to process search request and display results
 
-    @RequestMapping(value = "/search/results")
+    @RequestMapping(value = "results")
     public String search(Model model, @RequestParam String searchType, String searchTerm) {
 
         ArrayList<HashMap<String, String>> jobs;
 
-        if (searchType.equals("all)")){
+        if (searchType.equals("all")) {
 
             jobs = JobData.findByValue(searchTerm);
 
